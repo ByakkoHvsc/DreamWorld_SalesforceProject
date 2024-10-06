@@ -1,0 +1,282 @@
+﻿Dream World: A CRM Application to Handle the Clients and their property Related Requirements 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PREPARED BY:
+Harshvardhan Singh Chauhan
+harshsc25@gmail.com
+ 
+
+
+
+
+Abstract  
+ 
+Dreams World Properties has carefully integrated Salesforce into its processes, improving customer management and optimising property-related services. This innovative integration streamlines the capture of information about customers directly from the company's website, minimising manual data entry errors and producing detailed customer profiles in Salesforce. Dreams World Properties presents a more specific experience to its let users by breaking them down into approved and non-approved categories, recommending properties based on their unique tastes and requirements. At the same time, non-approved users are not left behind, since they can still view a wide range of property listings that meet general suitability requirements.
+This seamless Salesforce integration not only optimizes operational efficiency by automating repetitive processes but also liberates the company's workforce from manual tasks, allowing staff to focus on more strategic objectives. As a result, customer satisfaction has improved, and the business has positioned itself for growth in the highly competitive real estate market. By leveraging Salesforce technology, Dreams World Properties has significantly elevated its ability to deliver superior customer service, provide tailored property recommendations, and streamline internal workflows for enhanced operational performance. The integration demonstrates the company’s commitment to utilizing cutting-edge technology to maintain its leadership in the industry, establishing a strong foundation for future success.
+ 
+ 
+ 
+
+
+Introduction  
+Dreams World Properties has harnessed the power of Salesforce to revolutionise its client management and property-related services. By integrating Salesforce with its website, the company has automated the capture and organization of customer information and preferences, creating detailed profiles without the need for manual data entry. This system categorises users into approved and non-approved segments, allowing for personalized property recommendations that enhance the user experience for approved clients while still providing a broad range of listings for others.
+This integration not only optimises operational efficiency but also frees up staff to focus on strategic tasks, ultimately improving customer satisfaction and driving growth in the competitive real estate market. In an era where personalized customer service and efficient data management are crucial, Dreams World Properties’ innovative approach sets it apart from competitors. The automation facilitated by Salesforce ensures that no customer detail is overlooked, and every interaction is recorded and utilized to enhance service delivery.
+Approved users receive tailored property suggestions, making their search more efficient and enjoyable, while non-approved users have access to comprehensive listings, ensuring no potential client is left out. This seamless integration showcases Dreams World Properties’ commitment to leveraging advanced technology to provide top-tier real estate services, demonstrating their leadership and forward-thinking in an ever-evolving industry. Through this innovative use of Salesforce, Dreams World Properties underscores its dedication to superior customer service, operational excellence, and effective management, solidifying its position as a frontrunner in the real estate market.
+ 
+ 
+ 
+ 
+	 
+	SL NO.
+	TASK
+	1.
+	Create a Jotform and integrate it with the org to create a record of customers automatically.  
+	2.
+	Create Objects from Spreadsheet.  
+	3.
+	Integrate Jotform with Salesforce Platform  
+	4.
+	Create Roles  
+	5.
+	Create a Property Details App  
+	6.
+	Create Profiles  
+	7.
+	Create a CheckBox field on user  
+	8.
+	Create Users  
+	9.
+	Create an Approval Process for Property Object  
+	10.
+	Create a Record trigger flow to submit the Approval Process Automatically.  
+	11.
+	Create an App Page  
+	12.
+	Create a LWC Component  
+	13.
+	Drag this Component to your App Page  
+	14.
+	Give Access of Apex Classes to Profiles  
+	 
+ 
+ 
+ 
+ 
+Task 1: Create a Jotform and integrate it with the org to create a record of customers automatically.  
+Objective: Create a form to capture customer details automatically and create a record in Salesforce.
+* Activity:
+   1. Develop a JotForm to capture details such as Name, Phone, Email, Address, and the type of property the customer is interested in.
+MyForm: https://form.jotform.com/242782679233466
+  
+
+
+
+Task 2: Create Objects from Spreadsheet  
+Objective: Directly create objects in Salesforce from a spreadsheet.
+   * Activity:
+   1. Create a Customer object.
+ 
+  
+
+ 
+ 
+   2. Create a Property object.
+ 
+ 
+  
+
+ 
+ 
+ 
+ 
+ 
+Task 3: Integrate JotForm with Salesforce  
+Objective: Integrate JotForm with Salesforce to create customer records automatically.
+   * Activity:
+   1. Integrate JotForm with Salesforce to automate customer record creation.
+  
+
+  
+
+ 
+Task 4: Create Roles  
+Objective: Create roles as per the business requirements.
+   * Activity:
+   1. Establish a hierarchical role structure where Sales Managers report to Sales Executives.
+   2. Establish a hierarchical role structure where Customer report to Sales Managers.
+ 
+ 
+  
+
+ 
+ 
+ 
+ 
+
+
+Task 5: Create a Property Details App  
+Objective: Create an app to display the created objects.
+   * Activity:
+   1. Create a new Lightning App named "Property Details" and add Customer and Property objects.
+  
+
+  
+
+  
+
+  
+
+ 
+ 
+ 
+Task 6: Create Profiles  
+Objective: Set up profiles as per the business requirements.
+   * Activity:
+   1. Customer Profile: Clone the Salesforce Platform User profile, name it "Customer," and adjust custom app settings to include only Property Details.
+ 
+  
+
+  
+
+   2. Manager Profile: Clone the Salesforce Platform User profile, name it "Manager," and enable permissions to modify both Property and Customer records.
+ 
+ 
+  
+
+ 
+  
+
+Task 7: Create a Checkbox Field on User  
+Objective: Create a checkbox field on the user object based on business requirements.
+   * Activity:
+   1. Create a new field named "Verified" on the User object with the data type "Checkbox."
+ 
+ 
+  
+
+ 
+  
+
+Task 8: Create Users  
+Objective: Create users with different roles and profiles.
+   * Activity:
+   1. User 1: Sales Executive with the System Administrator profile.
+ 
+  
+
+   2. User 2: Manager with the Manager profile.
+  
+
+   3. User 3: Customer with the Customer profile, "Verified" checkbox unchecked.
+  
+
+   4. User 4: Customer2 with the Customer profile, "Verified" checkbox checked.
+ 
+  
+
+Task 9: Create an Approval Process for the Property Object  
+Objective: Establish an approval process for the Property object.
+   * Activity:
+   1. Create a "Property Approval" process with criteria such as "Location is not blank" and "Verified equals false." Assign Managers and Sales Executives as approvers, and update the Verified status based on approval outcomes.
+ 
+ 
+ 
+  
+
+  
+
+ 
+  
+
+ 
+  
+
+ 
+  
+
+  
+
+ 
+ 
+  
+
+ 
+Task 10: Create a Record Trigger Flow for Approval  
+Objective: Automatically submit the approval process when a property record is created.
+   * Activity:
+   1. Develop a Record Trigger Flow that triggers when a new property record is created and submits the record for approval.
+ 
+  
+
+ 
+  
+
+ 
+Task 11: Create an App Page  
+Objective: Build an app page for property search functionality.
+   * Activity:
+   1. Create an app page labeled "Search Your Property" and add it to the Property Details app.
+ 
+  
+
+ 
+  
+
+ 
+
+
+Task 12: Create a Lightning Web Component (LWC)  
+Objective: Develop an LWC component to manage property access for verified and unverified customers.
+   * Activity:
+   1. Develop the LWC component with Apex logic to handle property visibility based on customer verification status.
+ 
+ 
+- APEX CLASSES
+  
+
+ 
+ 
+  
+
+ 
+  
+
+ 
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+Task 13: Deploy the LWC Component to the App Page  
+Objective: Add the LWC component to the app page.
+   * Activity:
+   1. Drag and drop the LWC component onto the "Search Your Property" app page and save.
+  
+
+ 
+ 
+  
+
+Task 14: Assign Apex Class Access to Profiles  
+Objective: Set appropriate security access to Apex classes for necessary profiles.
+   * Activity:
+   1. Assign access to the Apex class PropertyHandler_LWC to both Manager and Customer profiles.
